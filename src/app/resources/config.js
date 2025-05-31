@@ -1,18 +1,18 @@
 // IMPORTANT: Replace with your own domain address - it's used for SEO in meta tags and schema
-const baseURL = "https://demo.magic-portfolio.com";
+const baseURL = "https://kyvrixon.dev";
 
 const routes = {
   "/": true,
   "/about": true,
   "/work": true,
-  "/blog": true,
-  "/gallery": true,
+  "/blog": false,
+  "/gallery": false,
 };
 
 // Enable password protection on selected routes
 // Set password in the .env file, refer to .env.example
 const protectedRoutes = {
-  "/work/automate-design-handovers-with-a-figma-to-code-pipeline": true,
+  "/work/abc": true,
 };
 
 import { Geist } from "next/font/google";
@@ -40,11 +40,11 @@ const font = {
 const style = {
   theme: "dark", // theme is not necessary when using ThemeProvider (default)
   neutral: "gray", // sand | gray | slate
-  brand: "cyan", // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan
-  accent: "red", // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan
-  solid: "contrast", // color | contrast
-  solidStyle: "flat", // flat | plastic
-  border: "playful", // rounded | playful | conservative
+  brand: "violet", // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan
+  accent: "violet", // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan
+  solid: "color", // color | contrast
+  solidStyle: "plastic", // flat | plastic
+  border: "rounded", // rounded | playful | conservative
   surface: "translucent", // filled | translucent
   transition: "all", // all | micro | macro
   scaling: "100" // 90 | 95 | 100 | 105 | 110
@@ -58,7 +58,7 @@ const effects = {
     radius: 100,
   },
   gradient: {
-    display: false,
+    display: true,
     opacity: 100,
     x: 50,
     y: 60,
@@ -69,7 +69,7 @@ const effects = {
     colorEnd: "page-background",
   },
   dots: {
-    display: true,
+    display: false,
     opacity: 40,
     size: "2",
     color: "brand-background-strong",
@@ -94,11 +94,11 @@ const effects = {
 const display = {
   location: true,
   time: true,
-  themeSwitcher: true
+  themeSwitcher: false
 };
 
 const mailchimp = {
-  action: "https://url/subscribe/post?parameters",
+  action: "",
   effects: {
     mask: {
       cursor: true,
